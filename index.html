@@ -28,30 +28,13 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div class="container" id="container">
       <!-- Timeblocks go here -->
     </div>
+    <button id='reset'>Reset</button>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script>
-      var time = moment().format('LLLL');
-      var datetime = null,
-          date = null;
-      init();
-
-      function init() {
-        currentDay.innerHTML = "";
-        date_time();
-      };
-
-      function date_time() {
-        now = moment().format('LLLL');
-        document.getElementById('currentDay').innerHTML = now;
-        setTimeout(function () { date_time(); }, 1000);
-      };
-
-      console.log(time);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
